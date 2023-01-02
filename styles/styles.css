@@ -1,0 +1,111 @@
+:root {
+    --couleur-primaire: #46307C;
+    --couleur-secondaire: #11CCC1;
+    --couleur-noire: #181818;
+    --couleur-blanche: #F9F9F9;
+    --font-color: #000;
+    --background-color: linear-gradient(to bottom, #46307C 0%, #11CCC1 50%, #F9F9F9 100%);
+}
+@font-face {
+    font-family: "Rubik_Dirt";
+    src: url("../assets/Fonts/Rubik_Dirt/RubikDirt-Regular.ttf");
+}
+@font-face {
+    font-family: "Rubik";
+    src: url("../assets/Fonts/Rubik/static/Rubik-Regular.ttf");
+}
+* {
+    font-family: "Rubik", "sans-serif";
+    font-weight: 400;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+    margin: auto;
+}
+header {
+    background-color: var(--couleur-primaire);
+}
+.cadre-titre {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 4vh 0;
+}
+.titre-page {
+    font-family: "Rubik_Dirt", "sans-serif";
+    font-size: 6em;
+    font-weight: 400;
+    margin: 3vh auto;
+    color: var(--couleur-blanche);
+}
+.sous-titre {
+    font-size: 2em;
+    font-weight: bold;
+    color: var(--couleur-secondaire);
+}
+.cadre-naviguation {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    padding: 5vh 0;
+}
+.encart-telecharge-contact {
+    margin: auto 2vw;
+}
+.lien {
+    padding: 0 1vw;
+    font-size: 1.5em;
+    color: var(--couleur-blanche);
+    text-decoration: none;
+}
+.lien:hover {
+    color: var(--couleur-secondaire);
+}
+.lien:visited {
+    color: var(--couleur-secondaire);
+}
+.encart-logos {
+    margin: auto 2vw;
+}
+.logo {
+    height: 6vh;
+    margin: 0 1vw;
+}
+main {
+    background: var(--background-color);
+}
+section {
+    padding: 5vh 0;
+}
+.titre-section {
+    padding: 3vh 3vw;
+    font-size: 3em;
+    color: var(--couleur-blanche);
+    letter-spacing: 0.05em;
+}
+.cadre-profil {
+    display: flex;
+    justify-content: space-around;
+    margin: 5vh 2vw;
+}
+.cadre-img-profil {
+    margin: auto 2vw;
+}
+.img-profil {
+    border-radius: 50%;
+    object-fit: cover;
+    height: 350px;
+    width: 300px;
+}
+.cadre-description-profil {
+    margin: auto 1vw;
+    text-align: justify;
+}
+.description-profil {
+    font-size: 1.1em;
+    color: var(--couleur-noire);
+}
+.cadre-projets {
+    display: flex;
+    justify-content: space-around;
+    margin: 5vh 2vw;
+}

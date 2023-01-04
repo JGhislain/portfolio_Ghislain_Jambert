@@ -28,13 +28,13 @@ header {
     display: flex;
     flex-direction: column;
     align-items: center;
-    padding: 4vh 0;
+    padding: 4vh 0 10vh 0;
 }
 .titre-page {
     font-family: "Rubik_Dirt", "sans-serif";
     font-size: 6em;
     font-weight: 400;
-    margin: 3vh auto;
+    margin: 3vh auto 6vh auto;
     color: var(--couleur-blanche);
 }
 .sous-titre {
@@ -42,11 +42,24 @@ header {
     font-weight: bold;
     color: var(--couleur-secondaire);
 }
+.ligne1-sous-titre {
+    margin-top: 30px;
+}
+.cadre-logo-titre {
+    position: absolute;
+}
+.logo-titre {
+    height: 15vh;
+    position: relative;
+    right: 425px;
+    top: 195px;
+    margin: 0;
+}
 .cadre-naviguation {
     display: flex;
     flex-direction: row;
     justify-content: space-between;
-    padding: 5vh 0;
+    padding: 8vh 0 5vh 0;
 }
 .encart-telecharge-contact {
     margin: auto 2vw;
@@ -77,7 +90,7 @@ section {
     padding: 5vh 0;
 }
 .titre-section {
-    padding: 3vh 3vw;
+    padding: 5vh 3vw 3vh 3vw;
     font-size: 3em;
     color: var(--couleur-blanche);
     letter-spacing: 0.05em;
@@ -93,8 +106,9 @@ section {
 .img-profil {
     border-radius: 50%;
     object-fit: cover;
-    height: 350px;
-    width: 300px;
+    height: 215px;
+    width: 215px;
+    border: ridge 10px var(--couleur-primaire);
 }
 .cadre-description-profil {
     margin: auto 1vw;

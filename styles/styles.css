@@ -175,10 +175,13 @@ section {
 .cadre-profil {
     display: flex;
     justify-content: space-around;
-    margin: 5vh 2vw;
+    margin: 3vh 2vw 5vh 2vw;
+    border-radius: 10px;
+    box-shadow: 5px 5px 15px rgb(0 0 0 / 30%);
+    padding: 15px;
 }
 .cadre-img-profil {
-    margin: auto 2vw;
+    margin: 4vh 2vw auto 2vw
 }
 .img-profil {
     border-radius: 50%;
@@ -194,6 +197,23 @@ section {
 .description-profil {
     font-size: 1.2em;
     color: var(--couleur-blanche);
+    line-height: 1.4;
+}
+.cadre-logo-lang {
+    display: flex;
+    justify-content: center;
+}
+.logo-html {
+    width: 73px;
+}
+.logo-css {
+    width: 51px;
+}
+.logo-js {
+    width: 50px;
+}
+.logo-lang {
+    margin: 5vh 2vw 0 2vw;
 }
 .cadre-projets {
     display: flex;
@@ -215,6 +235,7 @@ section {
     font-size: 2.2em;
     color: var(--couleur-noire);
     font-weight: bold;
+    text-align: center;
 }
 .img-projet {
     width: 460px;
@@ -223,6 +244,7 @@ section {
 .description-projet {
     color: var(--couleur-noire);
     font-size: 1.2em;
+    line-height: 1.4;
 }
 footer {
     display: flex;

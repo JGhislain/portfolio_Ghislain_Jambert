@@ -182,7 +182,7 @@ main {
     background: var(--background-color);
 }
 section {
-    padding: 5vh 0;
+    padding: 5vh 0 0 0;
 }
 .titre-section {
     padding: 5vh 3vw 3vh 3vw;
@@ -232,7 +232,7 @@ section {
     width: 50px;
 }
 .logo-lang {
-    margin: 5vh 2vw 0 2vw;
+    margin: 5vh 2vw 2vh 2vw;
 }
 .cadre-projets {
     display: flex;
@@ -342,7 +342,7 @@ footer {
         margin: 10px 70px 0 70px;
     }
     section {
-        padding: 20px 0;
+        padding: 20px 0 0 0;
     }
     .titre-section {
         padding: 30px 20px 20px 30px;

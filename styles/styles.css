@@ -82,6 +82,48 @@
         opacity: 0;
     }
 }
+@keyframes transition {
+    0% {
+        transform: translateX(-150vw);
+    }
+    100% {
+        transform: translateX(0);
+    }
+}
+@keyframes translation {
+    0% {
+        transform: translateY(150vw);
+        opacity: 0;
+    }
+    100% {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+@keyframes flicker {
+	0% {
+		opacity: 0.5;
+		text-shadow: 2px 2px 10px var(--couleur-primaire);
+	}
+	100% {
+		opacity: 1;
+		text-shadow: 2px 2px 20px var(--couleur-primaire);
+	}
+}
+@keyframes apparition {
+    0% {
+        opacity: 0;
+        scale: 0;
+    }
+    50% {
+        opacity: 0.5;
+        scale: 1.2;
+    }
+    100% {
+        opacity: 1;
+        scale: 1;
+    }
+}
 @font-face {
     font-family: "Rubik_Dirt";
     src: url("../assets/Fonts/Rubik_Dirt/RubikDirt-Regular.ttf");
@@ -101,6 +143,7 @@ header {
     background-color: var(--couleur-primaire);
 }
 .cadre-titre {
+    animation: apparition 2s ease-in-out;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -111,8 +154,16 @@ header {
     font-size: 6em;
     font-weight: 400;
     margin: 3vh auto 6vh auto;
-    color: var(--couleur-blanche);
-    text-align: center;
+	color: transparent;
+	-webkit-text-stroke: var(--couleur-blanche);
+	-webkit-text-stroke-width: 1px;
+	text-shadow: 2px 2px 10px var(--couleur-primaire);
+	transition: all 0.5s ease-in-out;
+	text-align: center;
+	animation: flicker 0.7s ease-in-out;
+}
+.titre-page:hover {
+		color: #fff;
 }
 .sous-titre {
     font-size: 2em;
@@ -131,12 +182,15 @@ header {
     right: 425px;
     top: 195px;
     margin: 0;
+    animation: apparition 1.5s ease-in-out;
 }
 .cadre-naviguation {
     display: flex;
     flex-direction: row;
     justify-content: space-between;
     padding: 8vh 0 5vh 0;
+    animation: transition 1s cubic-bezier(0.175, 0.385, 0.12, 1.275) both;
+    animation-delay: 1s;
 }
 .encart-telecharge-contact {
     margin: auto 2vw;
@@ -182,6 +236,8 @@ main {
     background: var(--background-color);
 }
 section {
+    animation: translation 1s cubic-bezier(0.175, 0.385, 0.12, 1.275) both;
+    animation-delay: 1s;
     padding: 5vh 0 0 0;
 }
 .titre-section {

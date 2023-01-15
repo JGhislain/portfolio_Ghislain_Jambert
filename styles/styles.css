@@ -163,7 +163,7 @@ header {
 	animation: flicker 0.7s ease-in-out infinite alternate;
 }
 .titre-page:hover {
-		color: #fff;
+		color: var(--couleur-blanche);
 }
 .sous-titre {
     font-size: 2em;
@@ -196,14 +196,19 @@ header {
     margin: auto 2vw;
 }
 .lien {
-    padding: 0 2vw;
+    padding: 30px 25px;
     font-size: 1.5em;
     color: var(--couleur-blanche);
     text-decoration: none;
+    border: solid 2px var(--couleur-blanche);
+    border-radius: 10%;
+    background-color: var(--couleur-secondaire);
+    margin: 0 0 0 20px;
 }
 .lien:hover {
-    color: var(--couleur-secondaire);
+    color: var(--couleur-blanche);
     zoom: 1.3;
+    filter: brightness(1.75);
 }
 .icone-cv {
     margin-right: 1vw;
@@ -218,7 +223,7 @@ header {
     animation: defilement-rot 750ms ease-in-out;
 }
 .lien:visited {
-    color: var(--couleur-secondaire);
+    color: var(--couleur-noire);
 }
 .encart-logos {
     margin: auto 2vw;
@@ -301,7 +306,7 @@ section {
 .cadre-projets {
     display: flex;
     flex-direction: column;
-    margin: 5vh 2vw;
+    margin: 30px 2vw 5vh 2vw;
 }
 .encart-projet {
     display: flex;
@@ -314,19 +319,29 @@ section {
     margin-right: 2vw;
 }
 .titre-projet {
-    margin-bottom: 4vh;
+    margin-bottom: 40px;
     font-size: 2.2em;
-    color: var(--couleur-noire);
+    color: var(--couleur-blanche);
     font-weight: bold;
     text-align: center;
+    padding: 20px;
+    border: solid 2px var(--couleur-blanche);
+    border-radius: 10%;
+    background-color: var(--couleur-primaire);
+    height: 150px;
+    width: 600px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 .titre-projet:hover {
     transition: scale 450ms ease-in-out;
-    color: var(--couleur-primaire);
+    color: var(--couleur-blanche);
     scale: 1.3;
+    filter: brightness(1.4);
 }
 .img-projet {
-    width: 460px;
+    width: 65vw;
     height: 655px;
     border-radius: 10px;
 }
@@ -334,6 +349,7 @@ section {
     color: var(--couleur-noire);
     font-size: 1.2em;
     line-height: 1.4;
+    padding-top: 1em;
 }
 footer {
     display: flex;

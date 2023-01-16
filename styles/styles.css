@@ -113,15 +113,15 @@
 @keyframes apparition {
     0% {
         opacity: 0;
-        scale: 0;
+        transform: scale(0);
     }
     50% {
         opacity: 0.5;
-        scale: 1.2;
+        transform: scale(1.2);
     }
     100% {
         opacity: 1;
-        scale: 1;
+        transform: scale(1);
     }
 }
 @font-face {
@@ -138,6 +138,22 @@
     box-sizing: border-box;
     scroll-behavior: smooth;
     margin: auto;
+}
+::-webkit-scrollbar {
+    width: 10px;
+    height: 10px;
+}
+::-webkit-scrollbar-thumb {
+    background: var(--couleur-blanche);
+    border-radius: 5px;
+}
+::-webkit-scrollbar-thumb:hover {
+    box-shadow: inset 0em 0em 0.3em 0em var(--couleur-secondaire);
+}
+::-webkit-scrollbar-track {
+    background: var(--background-color);
+    border-radius: 0px;
+    box-shadow: inset 0px 0px 0px 0px var(--couleur-secondaire);
 }
 header {
     background-color: var(--couleur-primaire);
@@ -193,21 +209,24 @@ header {
     animation-delay: 1s;
 }
 .encart-telecharge-contact {
+    display: flex;
     margin: auto 2vw;
 }
 .lien {
+    display: flex;
     padding: 30px 25px;
     font-size: 1.5em;
     color: var(--couleur-blanche);
     text-decoration: none;
     border: solid 2px var(--couleur-blanche);
-    border-radius: 10%;
+    border-radius: 10px;
     background-color: var(--couleur-secondaire);
-    margin: 0 0 0 20px;
+    margin: 0 0 0 50px;
 }
 .lien:hover {
+    transition: transform 450ms ease-in-out;
+    transform: scale(1.3);
     color: var(--couleur-blanche);
-    zoom: 1.3;
     filter: brightness(1.75);
 }
 .icone-cv {
@@ -285,7 +304,10 @@ section {
     font-weight: bold;
 }
 .ocr-lien:hover {
-    color: var(--couleur-primaire);
+    color: var(--couleur-secondaire);
+    transition: font-size 450ms ease-in-out;
+    font-size: 1.3em;
+    filter: brightness(1.5);
 }
 .cadre-logo-lang {
     display: flex;
@@ -326,7 +348,7 @@ section {
     text-align: center;
     padding: 20px;
     border: solid 2px var(--couleur-blanche);
-    border-radius: 10%;
+    border-radius: 10px;
     background-color: var(--couleur-primaire);
     height: 150px;
     width: 600px;
@@ -335,9 +357,9 @@ section {
     justify-content: center;
 }
 .titre-projet:hover {
-    transition: scale 450ms ease-in-out;
+    transition: transform 450ms ease-in-out;
+    transform: scale(1.3);
     color: var(--couleur-blanche);
-    scale: 1.3;
     filter: brightness(1.4);
 }
 .img-projet {
@@ -346,10 +368,11 @@ section {
     border-radius: 10px;
 }
 .description-projet {
-    color: var(--couleur-noire);
+    color: var(--couleur-blanche);
     font-size: 1.2em;
     line-height: 1.4;
     padding-top: 1em;
+    text-align: justify;
 }
 footer {
     display: flex;
@@ -392,8 +415,9 @@ footer {
         margin: 40px 0 0 0;
     }
     .cadre-naviguation {
-        display: block;
+        display: flex;
         padding: 40px 0 40px 0;
+        align-items: end;
     }
     .encart-telecharge-contact {
         display: flex;
@@ -404,14 +428,13 @@ footer {
         font-size: 1.4em;
     }
     .lien:hover {
-        zoom: 1.3;
+        transition: transform 450ms ease-in-out;
+        transform: scale(1.2);
+        color: var(--couleur-blanche);
+        filter: brightness(1.75);
     }
     .encart-logos {
         margin: 20px 0 0 0;
-    }
-    .cadre-naviguation {
-        display: block;
-        padding: 40px 0 40px 0;
     }
     .logo {
         height: 60px;
@@ -468,6 +491,8 @@ footer {
         color: var(--couleur-noire);
         font-weight: bold;
         text-align: center;
+        height: 115px;
+        width: 75%;
     }
     .img-projet {
         width: 80%;
@@ -517,22 +542,24 @@ footer {
         margin: 25px 0 0 0;
     }
     .encart-telecharge-contact {
+        display: block;
         margin: 0px auto 10px auto;
     }
     .lien {
+        margin: 0 60px 20px 60px;
         padding: 10px 10px;
-        font-size: 1.1em;
+        font-size: 1em;
     }
     .lien:hover {
-        zoom: 1.15;
+        transition: transform 450ms ease-in-out;
+        transform: scale(1.2);
     }
     .encart-logos {
-        margin: 20px 0 0 0;
+        display: flex;
+        margin: 30px 0 0 0;
     }
     .cadre-naviguation {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
+        display: block;
         padding: 40px 0 20px 0;
     }
     .logo {
@@ -582,10 +609,12 @@ footer {
     }
     .titre-projet {
         margin-bottom: 40px;
-        font-size: 1.8em;
+        font-size: 1.4em;
         color: var(--couleur-noire);
         font-weight: bold;
         text-align: center;
+        height: 100px;
+        width: 80%;
     }
     .img-projet {
         width: 80%;

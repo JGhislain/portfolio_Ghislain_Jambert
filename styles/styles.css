@@ -583,6 +583,8 @@ footer {
         float: left;
         shape-outside: margin-box;
         margin: 0 15px 5px 0;
+        height: 150px;
+        width: 150px;
     }
     .cadre-description-profil {
         margin: auto 5px;
